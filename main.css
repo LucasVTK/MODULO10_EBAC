@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*
+Tira a rolagem lateral da tela
+*/
+html{
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header > .container,
+footer > .container{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+
+/*
+    MANTEM A HEADER ESTATAICA MESMO ROLANDO A TELA
+*/
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header,footer{
+    background-color: #192a56;
+    padding-top: 16px;
+    color: #fff;
+}
+
+/*
+    Display none tira a navegação para ser adicionada depois no Jquery
+*/
+nav {
+    background-color: #575fcf;
+    padding: 16px 0;
+    display: none;
+}
+
+/*
+    RETIRA O MARKER DA LISTA MEXE NAS FONTES DA NAVEGAÇÃO E LISTA
+*/
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-hamburguer{
+    cursor: pointer;
+    width: 32px;
+}
+
+.menu-hamburguer span{
+    padding: 2px;
+    width: 100%;
+    display: block;
+    margin-bottom: 4px;
+    background-color: #fff;
+}
+
+.container-flex{
+    display: flex;
+}
+
+#sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
+}
+
+section{
+    padding: 48px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+/*
+    ASSIM QUE A LISTA DE VEICULOS CHEGUEM NO MAXIMO DO TAMANHO DO CONTAINER
+    ELE PULA UMA LINHA
+*/
+.lista-veiculos{
+    flex-wrap: wrap;
+}
+
+.lista-veiculos li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+.lista-veiculos li img{
+    max-width: 100%;
+}
+
+.lista-veiculos li h3{
+    margin: 16px;
+}
+
+/*
+    DEFINE TAMANHO LATELA ENTRE OS ITENS Q FICAM NO CENTRO DA TELA
+*/
+.iten-central{
+    margin: 0 5%;
+}
+
+/*
+    ESTILIZA O BOTÃO TAMANHO, COR, TIPO DE FONTE E MEXE NAS FONTES, TAMBEM ADICIONA BORDA AREDONDADA.....
+*/
+button{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color:  #119759;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.price{
+    margin: 16px 0;
+    display: block;
+}
+
+/*
+    ESPECIFICAMENTE "DEL" ADICIONA UMA LINHA "RISCANDO O NUMERO OU TEXTO COLOCADO DENTRO" E ADICIONA UMA COR
+*/
+
+.price del{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.form-campo{
+    margin-bottom: 16px;
+}
+
+/*
+    DEIXA O CAMPO DE LABEL EM BLOCO, AO INVES DE FICAR AO LADO DO INPUT FICA EM CIMA
+*/
+.form-campo label{
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input,
+.form-campo textarea{
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+/*
+    NÃO DEIXA O TEXTAREA SER AUMENTADO OU DIMINUIDO PELO USUARIO E DEFINE UM TAMANHO ESTATICO PARA ELE
+*/
+.form-campo textarea{
+resize: none;
+height: 120px;
+}
+
+/*
+    DEFINE UM TAMANHO PARA O FORMULARIO INTEIRO
+*/
+form{
+    max-width: 360px;
+}
+
+/*
+    DEFINE O TAMANHO MAXIMO PARA O BOTÃO, PARA QUE NÃO FIQUE TAMBEM DO TAMANHO DOS INPUTS
+*/
+form button{
+    max-width: 120px;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li img{
+    height: 32px;
+}
+
